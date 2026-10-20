@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gipit Eats | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-image">
+            <h1>Send Us Your Meal Ideas</h1>
+            <p>Got a budget-friendly recipe or dorm hack? Share it with us!</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="recipe.html">Recipes</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+<section class="contact-container">
+    <h2>Share Your Gipit Recipe!</h2>
+
+    <p>
+        Have a delicious meal that's easy on the budget?
+        Share your recipe with us and help others discover
+        simple and affordable meals!
+    </p>
+
+    <form id="contactForm" class="contact-form">
+
+        <h3>About You</h3>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        
+        <br>
+        <hr>
+
+        <h3>Recipe Information</h3>
+
+        <label for="recipeName">Recipe Name:</label>
+        <input type="text" id="recipeName" name="recipeName" placeholder="e.g., Budget-Friendly Chicken Adobo" required>
+
+        <label for="introduction">Recipe Introduction:</label>
+        <textarea id="introduction" name="introduction" rows="4" placeholder="Tell us about your recipe and why you love it..." required></textarea>
+
+        <label for="ingredients">Ingredients and Quantities:</label>
+        <textarea id="ingredients" name="ingredients" rows="6" placeholder="Example:
+            1/2 kilo chicken
+            3 cloves garlic
+            1/4 cup soy sauce
+            2 tablespoons vinegar"
+        required></textarea>
+
+        <label for="steps">Cooking Steps:</label>
+        <textarea id="steps" name="steps" rows="7" placeholder="Example:
+            1. Prepare and wash the ingredients.
+            2. Saute the garlic.
+            3. Add the chicken and seasonings.
+            4. Simmer until fully cooked."
+        required></textarea>
+
+        <label for="recipePhoto">Recipe Photo (Optional):</label>
+        <input type="file" id="recipePhoto" name="recipePhoto" accept="image/*">
+        <button type="submit">Submit My Recipe</button>
+    </form>
+
+</section>
+
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+        </div>
+        <p>&copy; 2026 Gipit Eats PH. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

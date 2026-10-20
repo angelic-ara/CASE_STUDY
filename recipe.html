@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gipit Eats | Articles & Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-image">
+            <h1>Student Meal Guides</h1>
+            <p>Easy recipes, budget breakdowns, and kitchen tricks</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="recipe.html" class="active">Recipes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2 class="page-title">Affordable & Quick Meals for College Students</h2>
+        
+        <!-- Live Search Box -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search meals (e.g. tuna, hotdog, egg)...">
+        </div>
+
+        <!-- 💡 DAPAT MAY ONCLICK ANG MGA BUTTONS NA ITO -->
+        <div class="tab-buttons">
+            <button class="tab-btn active" onclick="openRecipe(event, 'tab-one')">🌭 Hotdog & Rice</button>
+            <button class="tab-btn" onclick="openRecipe(event, 'tab-two')">🐟 Century Tuna</button>
+            <button class="tab-btn" onclick="openRecipe(event, 'tab-three')">🥩 Corned Beef</button>
+            <button class="tab-btn" onclick="openRecipe(event, 'tab-four')">🍜 Pancit Canton</button>
+            <button class="tab-btn" onclick="openRecipe(event, 'tab-five')">🍜 Pancit Canton</button>
+            <button class="tab-btn" onclick="openRecipe(event, 'tab-six')">🌭 Hotdog & Rice</button>
+            <button class="tab-btn" onclick="openRecipe(event, 'tab-seven')">🐟 Century Tuna</button>
+            <button class="tab-btn" onclick="openRecipe(event, 'tab-eight')">🥩 Corned Beef</button>
+            <button class="tab-btn" onclick="openRecipe(event, 'tab-nine')">🍜 Pancit Canton</button>
+            <button class="tab-btn" onclick="openRecipe(event, 'tab-ten')">🍜 Pancit Canton</button>
+        </div>
+
+        <div id="articleList">
+            <!-- TAB 1: Hotdog & Rice -->
+            <div id="tab-one" class="tab-content active-tab column">
+                <article class="recipe-card">
+                    <img src="images/article1.jpg" alt="Fried Hotdog with Garlic Rice">
+                    <h2>🌭 1. Fried Hotdog with Garlic Rice</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 5-8 mins | <strong>Approx. Cost:</strong> ₱35 - ₱40</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>2 pieces Hotdog (notched/sliced diagonally)</li>
+                        <li>1 cup Cooked Rice (preferably cold/leftover)</li>
+                        <li>1 clove Garlic (minced)</li>
+                        <li>1 tbsp Cooking Oil</li>
+                        <li>Ketchup or Mayo (optional topping)</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Heat oil in a pan over medium heat.</li>
+                        <li>Fry the hotdogs for 3 to 4 minutes until fully cooked and slightly browned. Set aside.</li>
+                        <li>In the same pan, saute minced garlic until golden brown.</li>
+                        <li>Add the cooked rice, break any clumps, and mix well with the garlic for 2 minutes.</li>
+                        <li>Serve hotdog over garlic rice with your choice of sauce.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <!-- TAB 2: Century Tuna -->
+            <div id="tab-two" class="tab-content column">
+                <article class="recipe-card">
+                    <img src="images/article2.jpg" alt="Sautéed Century Tuna with Rice">
+                    <h2>🐟 2. Century Tuna & Calamansi Combo</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 5 mins | <strong>Approx. Cost:</strong> ₱40 - ₱45</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>1 can Century Tuna (Flakes in Oil or Hot & Spicy)</li>
+                        <li>1 small Onion (chopped)</li>
+                        <li>1 clove Garlic (minced)</li>
+                        <li>1 cup Warm Cooked Rice</li>
+                        <li>Squeeze of Calamansi or Soy Sauce (optional)</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Saute garlic and chopped onion in a pan until soft and fragrant.</li>
+                        <li>Pour in the entire can of Century Tuna (including the oil for flavor).</li>
+                        <li>Stir-fry for 2 to 3 minutes until warm and well combined.</li>
+                        <li>(Optional) Add a squeeze of calamansi or a dash of soy sauce for extra zest.</li>
+                        <li>Serve hot on top of a fresh bowl of rice.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <!-- TAB 3: Corned Beef -->
+            <div id="tab-three" class="tab-content column">
+                <article class="recipe-card">
+                    <img src="images/article3.jpg" alt="Gisadong Corned Beef with Crispy Potatoes">
+                    <h2>🥩 3. Gisadong Corned Beef with Potatoes</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 8-10 mins | <strong>Approx. Cost:</strong> ₱45 - ₱55</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>1 small can Corned Beef</li>
+                        <li>1 small Potato (cut into small cubes)</li>
+                        <li>1 small Onion (sliced)</li>
+                        <li>1 tbsp Cooking Oil</li>
+                        <li>1 cup Cooked Rice</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Heat oil in a pan and fry potato cubes until golden and crisp. Set aside.</li>
+                        <li>Saute sliced onions until translucent.</li>
+                        <li>Add the corned beef and cook for 3 to 4 minutes until hot.</li>
+                        <li>Mix the fried potato cubes back into the corned beef.</li>
+                        <li>Serve steaming hot alongside warm rice.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <!-- TAB 4: Pancit Canton -->
+            <div id="tab-four" class="tab-content column">
+                <article class="recipe-card">
+                    <img src="images/article4.jpg" alt="Pancit Canton with Egg">
+                    <h2>🍜 4. Pancit Canton & Boiled Egg Upgrade</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 5 mins | <strong>Approx. Cost:</strong> ₱30 - ₱45</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>1-2 packs Pancit Canton (Any flavor)</li>
+                        <li>1 Egg (Boiled or fried)</li>
+                        <li>Optional: Toasted bread or calamansi</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Boil noodles until cooked, then drain water.</li>
+                        <li>Mix the seasoning and oil packets thoroughly.</li>
+                        <li>Top with a soft-boiled or sunny-side-up egg and serve hot.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <!-- TAB 5: Pancit Canton -->
+            <div id="tab-five" class="tab-content column">
+                <article class="recipe-card">
+                    <img src="images/article4.jpg" alt="Pancit Canton with Egg">
+                    <h2>🍜 4. Pancit Canton & Boiled Egg Upgrade</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 5 mins | <strong>Approx. Cost:</strong> ₱30 - ₱45</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>1-2 packs Pancit Canton (Any flavor)</li>
+                        <li>1 Egg (Boiled or fried)</li>
+                        <li>Optional: Toasted bread or calamansi</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Boil noodles until cooked, then drain water.</li>
+                        <li>Mix the seasoning and oil packets thoroughly.</li>
+                        <li>Top with a soft-boiled or sunny-side-up egg and serve hot.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <!-- TAB 6: Hotdog & Rice -->
+            <div id="tab-six" class="tab-content active-tab column">
+                <article class="recipe-card">
+                    <img src="images/article1.jpg" alt="Fried Hotdog with Garlic Rice">
+                    <h2>🌭 1. Fried Hotdog with Garlic Rice</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 5-8 mins | <strong>Approx. Cost:</strong> ₱35 - ₱40</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>2 pieces Hotdog (notched/sliced diagonally)</li>
+                        <li>1 cup Cooked Rice (preferably cold/leftover)</li>
+                        <li>1 clove Garlic (minced)</li>
+                        <li>1 tbsp Cooking Oil</li>
+                        <li>Ketchup or Mayo (optional topping)</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Heat oil in a pan over medium heat.</li>
+                        <li>Fry the hotdogs for 3 to 4 minutes until fully cooked and slightly browned. Set aside.</li>
+                        <li>In the same pan, saute minced garlic until golden brown.</li>
+                        <li>Add the cooked rice, break any clumps, and mix well with the garlic for 2 minutes.</li>
+                        <li>Serve hotdog over garlic rice with your choice of sauce.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <!-- TAB 7: Century Tuna -->
+            <div id="tab-seven" class="tab-content column">
+                <article class="recipe-card">
+                    <img src="images/article2.jpg" alt="Sautéed Century Tuna with Rice">
+                    <h2>🐟 2. Century Tuna & Calamansi Combo</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 5 mins | <strong>Approx. Cost:</strong> ₱40 - ₱45</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>1 can Century Tuna (Flakes in Oil or Hot & Spicy)</li>
+                        <li>1 small Onion (chopped)</li>
+                        <li>1 clove Garlic (minced)</li>
+                        <li>1 cup Warm Cooked Rice</li>
+                        <li>Squeeze of Calamansi or Soy Sauce (optional)</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Saute garlic and chopped onion in a pan until soft and fragrant.</li>
+                        <li>Pour in the entire can of Century Tuna (including the oil for flavor).</li>
+                        <li>Stir-fry for 2 to 3 minutes until warm and well combined.</li>
+                        <li>(Optional) Add a squeeze of calamansi or a dash of soy sauce for extra zest.</li>
+                        <li>Serve hot on top of a fresh bowl of rice.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <!-- TAB 8: Corned Beef -->
+            <div id="tab-eight" class="tab-content column">
+                <article class="recipe-card">
+                    <img src="images/article3.jpg" alt="Gisadong Corned Beef with Crispy Potatoes">
+                    <h2>🥩 3. Gisadong Corned Beef with Potatoes</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 8-10 mins | <strong>Approx. Cost:</strong> ₱45 - ₱55</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>1 small can Corned Beef</li>
+                        <li>1 small Potato (cut into small cubes)</li>
+                        <li>1 small Onion (sliced)</li>
+                        <li>1 tbsp Cooking Oil</li>
+                        <li>1 cup Cooked Rice</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Heat oil in a pan and fry potato cubes until golden and crisp. Set aside.</li>
+                        <li>Saute sliced onions until translucent.</li>
+                        <li>Add the corned beef and cook for 3 to 4 minutes until hot.</li>
+                        <li>Mix the fried potato cubes back into the corned beef.</li>
+                        <li>Serve steaming hot alongside warm rice.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <!-- TAB 9: Pancit Canton -->
+            <div id="tab-nine" class="tab-content column">
+                <article class="recipe-card">
+                    <img src="images/article4.jpg" alt="Pancit Canton with Egg">
+                    <h2>🍜 4. Pancit Canton & Boiled Egg Upgrade</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 5 mins | <strong>Approx. Cost:</strong> ₱30 - ₱45</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>1-2 packs Pancit Canton (Any flavor)</li>
+                        <li>1 Egg (Boiled or fried)</li>
+                        <li>Optional: Toasted bread or calamansi</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Boil noodles until cooked, then drain water.</li>
+                        <li>Mix the seasoning and oil packets thoroughly.</li>
+                        <li>Top with a soft-boiled or sunny-side-up egg and serve hot.</li>
+                    </ol>
+                </article>
+            </div>
+
+            <!-- TAB 10: Pancit Canton -->
+            <div id="tab-ten" class="tab-content column">
+                <article class="recipe-card">
+                    <img src="images/article4.jpg" alt="Pancit Canton with Egg">
+                    <h2>🍜 4. Pancit Canton & Boiled Egg Upgrade</h2>
+                    <p class="recipe-meta"><strong>Prep Time:</strong> 5 mins | <strong>Approx. Cost:</strong> ₱30 - ₱45</p>
+                    <h3>Ingredients:</h3>
+                    <ul class="recipe-list">
+                        <li>1-2 packs Pancit Canton (Any flavor)</li>
+                        <li>1 Egg (Boiled or fried)</li>
+                        <li>Optional: Toasted bread or calamansi</li>
+                    </ul>
+                    <h3>Cooking Steps:</h3>
+                    <ol class="recipe-list">
+                        <li>Boil noodles until cooked, then drain water.</li>
+                        <li>Mix the seasoning and oil packets thoroughly.</li>
+                        <li>Top with a soft-boiled or sunny-side-up egg and serve hot.</li>
+                    </ol>
+                </article>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+        </div>
+        <p>&copy; 2026 Gipit Eats PH. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

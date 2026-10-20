@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gipit Eats | Student Meals</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-image">
+        <h1>Gipit Eats PH</h1>
+        <p>
+          Mabilis, Mura, at Masarap: Ang Survival Food Guide ng Estudyanteng Pinoy
+        </p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="recipe.html">Recipes</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>Welcome to Gipit Eats!</h2>
+        <p>
+          Welcome to Gipit Eats, your go-to place for easy, delicious,
+          and affordable meals! We believe that good food doesn't have
+          to be expensive. Our website offers budget-friendly recipes,
+          simple cooking guides, and meal-planning tips to help you save
+          money. You can also share your own recipes and inspire others
+          to cook. At Gipit Eats, we make every meal simple, tasty, and
+          sulit sa budget!
+        </p>
+      </section>
+
+      <!--  QUICK BUDGET CALCULATOR SECTION -->
+      <section class="glow-card">
+  <div class="glow-card-content">
+    <h2>📱 Quick Budget Calculator</h2>
+    <p>Enter your meal budget below to see what you can cook today!</p>
+    <div class="calc-input-group">
+      <input type="number" id="budgetInput" placeholder="Enter budget (e.g. 50)" min="10">
+      <button id="calcBtn">Find Meal</button>
+    </div>
+    <p id="calcResult" class="calc-result-text"></p>
+  </div>
+</section>
+
+      <h2>Featured Student Classics</h2>
+      <section class="content">
+        <div class="column">
+          <article>
+            <img
+              src="two.png"
+              alt="Fried red hotdogs served over warm white rice with a fried egg"
+            />
+            <h3>Hotdog at Itlog: The Ultimate Comfort</h3>
+            <p>
+              Why tender juicy hotdogs paired with warm rice and a sunny-side-up
+              egg remain the undisputed king of quick student meals.
+            </p>
+          </article>
+        </div>
+        <div class="column">
+          <article>
+            <img
+              src="one.png"
+              alt="Century tuna flakes in oil served beside steamed white rice and calamansi"
+            />
+            <h3>Century Tuna Hacks for Busy Days</h3>
+            <p>
+              Straight from the can or sautéed with onions and garlic: how
+              canned tuna saves time and money during exam week.
+            </p>
+          </article>
+        </div>
+      </section>
+      <div class="view-more-container">
+        <a href="articles.html" class="view-more-btn">View More Recipes →</a>
+      </div>
+    </main>
+    
+    <footer>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+      </div>
+      <div class="socials">
+        <p>Follow us: Facebook | Instagram | TikTok</p>
+      </div>
+      <p>&copy; 2026 Gipit Eats PH. All rights reserved.</p>
+    </footer>
+
+    <!--  SCRIPT LINK PARA GUMANA ANG CALCULATOR -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,443 @@
+/* GLOBAL RESET & BASE STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2b2d42;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* HEADER & BANNER STYLES */
+header {
+    background-color: #d90429;
+    color: #ffffff;
+    text-align: center;
+}
+
+.header-image {
+    background: linear-gradient(rgba(217, 4, 41, 0.8), rgba(43, 45, 66, 0.85)), 
+                url('images/hero-banner.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+}
+
+.header-image h1 {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+    color: #ffb703;
+}
+
+.header-image p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* NAVIGATION BAR */
+
+
+nav {
+    background-color: #2b2d42;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    color: #ffffff;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover, 
+nav a.active {
+    background-color: #ffb703;
+    color: #2b2d42;
+}
+
+/* MAIN CONTENT & CARDS */
+.intro, .about-section, .contact-container, .calculator-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #d90429;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+
+/* Flexbox 2-Column Section */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.column {
+    flex: 1 1 calc(50% - 20px);
+    display: flex;
+}
+
+article {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    border-top: 4px solid #ffb703;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+article img {
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Calculator & Search Box Styling */
+.calc-input-group, .search-box {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.calc-input-group input, .search-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.calc-input-group button {
+    background-color: #d90429;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calc-result-text {
+    font-weight: bold;
+    color: #0d6efd;
+    margin-top: 10px;
+}
+
+/* ANIMATED GLOW BORDER CARD EFFECT */
+.glow-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px; /* Ito ang magsisilbing kapal ng umiikot na border */
+    background: transparent;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Ang umiikot na background layer */
+.glow-card::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(180deg, yellow, #ffb703, #d90429, #d90429, #ffb703, yellow);
+    animation: rotateGlow 10s linear infinite;
+    z-index: 0;
+}
+
+/* Ang mismong laman ng card sa loob para hindi matakpan */
+.glow-card-content {
+    position: relative;
+    background-color: #ffffff; /* O kung gusto mo ay dark charcoal: #2b2d42 */
+    color: #2b2d42;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes rotateGlow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* View More Recipes Button */
+.view-more-container {
+    text-align: center;
+    margin: 30px 0 40px;
+}
+
+.view-more-btn {
+    display: inline-block;
+    background-color: #d90429;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #2b2d42;
+    color: #ffb703;
+    transform: translateY(-3px);
+}
+
+/* ARTICLES & INTERACTIVE RECIPE TABS STYLING */
+.page-title {
+    text-align: center;
+    color: #2b2d42;
+    margin-bottom: 25px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background-color: #2b2d42;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: #d90429;
+}
+
+.tab-btn.active {
+    background-color: #d90429;
+    color: #ffb703;
+    box-shadow: 0 4px 10px rgba(217, 4, 41, 0.3);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-tab {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.recipe-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-top: 5px solid #d90429;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.recipe-card img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.recipe-meta {
+    font-size: 1.05rem;
+    background-color: #fff3bf;
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 10px 0 20px 0;
+    color: #2b2d42;
+    font-weight: 600;
+}
+
+.recipe-card h3 {
+    color: #d90429;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.recipe-list {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* FEATURE SECTION STYLING */
+.features-section {
+    text-align: center;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 80px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 22px 16px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.feature-card h3 {
+    color: #d90429;
+}
+
+/* CONTACT FORM STYLING */
+.contact-container {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-container > h2 {
+    margin-top: 0;
+}
+
+.contact-container > p {
+    margin-bottom: 20px;
+}
+
+.contact-form h3 {
+    color: #d90429;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.contact-form hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.contact-form input[type="file"] {
+    background-color: #f8f9fa;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 14px;
+    background-color: #d90429;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background-color: #2b2d42;
+}
+
+/* FOOTER */
+footer {
+    background-color: #2b2d42;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ffb703;
+    text-decoration: none;
+}
+
+footer p {
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE DESIGN (MEDIA QUERY) */
+@media (max-width: 768px) {
+    .column {
+        flex: 1 1 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
