@@ -106,6 +106,7 @@ function openRecipe(evt, tabName) {
     const selectedTab = document.getElementById(tabName);
     if (selectedTab) {
         selectedTab.classList.add("active-tab");
+        selectedTab.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     
     if (evt && evt.currentTarget) {
